@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/lodash.js"></script>
+    <script type="text/javascript" src="js/card.js"></script>
+    <script type="text/javascript" src="js/deck.js"></script>
+    <script type="text/javascript" src="js/player.js"></script>
+    <script type="text/javascript" src="js/start.js"></script>
+  </head>
+  <body>
+    <div class="game">
+      <div class="dealer">
+      </div>
+      <div class="player">
+      </div>
+    </div>
+
+    <div class="templates">
+      <div class="card-template">
+        <div class="card-container">
+          <div class="card">
+            <div class="front">
+              <img src="images/back.jpg" />
+            </div>
+            <div class="back">
+              {{ imagePath }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

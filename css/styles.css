@@ -1,0 +1,54 @@
+body {
+		background-image: url('../images/felt_table.jpg');
+}
+
+.card-container {
+		perspective: 1000;
+		position: absolute;
+		top: -200px;
+}
+
+.card-container.show .card {
+		transform: rotateY(180deg);
+}
+
+.card-container, .front, .back {
+	width: 144px;
+	height: 192px;
+}
+
+.card {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+.card img {
+		width: 144px;
+		height: 192px;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+
+.templates {
+		display: none;
+}
