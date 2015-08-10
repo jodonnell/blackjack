@@ -61,7 +61,7 @@ Game.prototype = {
         var $newCardHtml = this.createCardHtml(player, card);
 
         var left = 400 + this.CARD_WIDTH * (player.numCardsInHand() - 1);
-        $newCardHtml.animate({top: player.yPos, left: left}, 300, function() {
+        $newCardHtml.animate({top: player.yPos, left: left}, 400, function() {
             if (!hidden) {
                 $(this).addClass('show');
             }
