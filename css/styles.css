@@ -52,3 +52,66 @@ body {
 .templates {
 		display: none;
 }
+
+.dealer {
+		margin-top: 100px;
+		height: 200px;
+}
+
+.player {
+		height: 200px;
+		margin-top: 100px;
+}
+
+.buttons {
+		margin-left: 400px;
+		line-height: 30px;
+		font-size: 20px;
+}
+
+.hit {
+		display: inline-block;
+		vertical-align: top;
+		width: 100px;
+		height: 30px;
+		background-color: red;
+		text-align: center;
+		border-radius: 4px;
+}
+
+.hit:hover {
+		cursor: pointer;
+		background-color: green;
+}
+
+.stay {
+		display: inline-block;
+		vertical-align: top;
+		width: 100px;
+		height: 30px;
+		background-color: red;
+		text-align: center;
+		border-radius: 4px;
+}
+
+.stay:hover {
+		cursor: pointer;
+		background-color: green;
+}
+
+.hit.inactive, .stay.inactive {
+		background-color: gray;
+}
+
+.score {
+		color: white;
+		margin-left: 100px;
+		font-size: 30px;
+}
+
+.ending {
+		color: white;
+		margin-left: 100px;
+		font-size: 40px;
+		height: 30px;
+}
