@@ -4,9 +4,9 @@ var Deck = function () {
 
 Deck.prototype = {
     create: function () {
-		    this.deck = []
+        this.deck = []
         _.each(['H', 'D', 'C', 'S'], function (suite) {
-				    _.each(['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'], function (number) {
+            _.each(['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'], function (number) {
                 this.deck.push(new Card(suite, number));
             }, this);
         }, this);
@@ -31,6 +31,6 @@ Deck.prototype = {
     },
     
     draw: function () {
-				return this.deck.pop();
+        return this.deck.pop();
     }
 };

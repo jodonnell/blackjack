@@ -48,7 +48,7 @@ Game.prototype = {
 
     createCardHtml: function (player, card) {
         var imagePath = card.imagePath();
-				var compiled = _.template($('.templates .card-template').html());
+        var compiled = _.template($('.templates .card-template').html());
         var $newCardHtml = $(compiled({'imagePath': '<img src="' + imagePath +'"/>'}));
         $(player.selector).find('.cards').append($newCardHtml);
         return $newCardHtml;
@@ -67,7 +67,6 @@ Game.prototype = {
             }
             $(player.selector).find('.score').html(player.calcScore());
         });
-		    
     },
 
     endGame: function (message) {
@@ -77,18 +76,18 @@ Game.prototype = {
     },
 
     deactivateButtons: function () {
-				$('.buttons div').addClass('inactive');
+        $('.buttons div').addClass('inactive');
     },
     
     reset: function () {
-				this.clear();
+        this.clear();
         this.createGame();
         this.dealInitialHand();
     },
     
     clear: function () {
-				$('.player, .dealer').find('.cards').html('');
-				$('.player, .dealer').find('.score').html('');
+        $('.player, .dealer').find('.cards').html('');
+        $('.player, .dealer').find('.score').html('');
         $('.ending').html('');
         $('.buttons div').removeClass('inactive');
         this.hideDealerScore();
@@ -97,7 +96,7 @@ Game.prototype = {
     calcWhoWon: function () {
         if (this.dealer.calcScore() > 21)
             this.endGame('DEALER BUSTED!!!');
-				else if (this.player.calcScore() === this.dealer.calcScore())
+        else if (this.player.calcScore() === this.dealer.calcScore())
             this.endGame('PUSH!!!');
         else if (this.player.calcScore() > this.dealer.calcScore())
             this.endGame('WINNER!!!');
@@ -106,11 +105,11 @@ Game.prototype = {
     },
 
     hideDealerScore: function () {
-				$('.dealer .score').hide();
+        $('.dealer .score').hide();
     },
 
     showDealerScore: function () {
-				$('.dealer .score').show();
+        $('.dealer .score').show();
     }
     
 };

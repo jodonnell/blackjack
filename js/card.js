@@ -5,7 +5,7 @@ var Card = function (suite, number) {
 
 Card.prototype = {
     imagePath: function () {
-				return 'images/' + this.number + this.suite + '.png';
+        return 'images/' + this.number + this.suite + '.png';
     },
 
     value: function () {
@@ -16,6 +16,6 @@ Card.prototype = {
     },
 
     isAce: function () {
-				return this.number === 'A';
+        return this.number === 'A';
     }
 };

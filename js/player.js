@@ -1,16 +1,16 @@
 var Player = function (yPos, selector) {
-		this.hand = [];
+    this.hand = [];
     this.yPos = yPos;
     this.selector = selector;
 }
 
 Player.prototype = {
-		addCard: function (card) {
-				this.hand.push(card);
+    addCard: function (card) {
+        this.hand.push(card);
     },
 
     numCardsInHand: function () {
-				return this.hand.length;
+        return this.hand.length;
     },
 
     calcScore: function () {
@@ -24,7 +24,7 @@ Player.prototype = {
                 return;
             score += card.value();
         });
-				return score;
+        return score;
     },
 
     acesScore: function (score) {
