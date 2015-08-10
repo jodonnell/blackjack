@@ -24,7 +24,7 @@ Game.prototype = {
     },
     
     playerHit: function () {
-				this.dealCard(this.player);
+        this.dealCard(this.player);
 
         if (this.player.calcScore() > 21) {
             this.endGame('You busted');
